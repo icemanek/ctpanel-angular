@@ -1,0 +1,80 @@
+.grid-container {
+  margin: 0;
+  margin-top: 80px;
+  margin-left: 90px;
+  margin-right: 90px;
+  }
+
+.header-home{
+  text-align: center;
+  font-size: 40px;
+  color: darkslategrey;
+  font-weight: 900;
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 45px;
+  -webkit-box-shadow: 3px 3px 15px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 3px 15px -1px rgba(0,0,0,0.75);
+  box-shadow: 3px 3px 15px -1px rgba(0,0,0,0.75);
+}
+
+h1{
+  font-size: 40px;
+  color: darkslategrey;
+  font-weight: 900;
+  margin-bottom: 100px;
+  margin-left:16px;
+}
+h2{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.mat-card-actions {
+position: absolute;
+top: 15px;
+right: 35px;
+bottom: 50px;
+font-size: 30px;
+}
+
+.mat-card-content{
+  margin-left:16px;
+  margin-top:20px;
+  margin-bottom: 40px;
+}
+
+.mat-card-title{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.mat-card-footer{
+  font-size: 20px;
+  margin-left:16px;
+  margin-top:20px;
+  margin-bottom: 40px;
+}
+.dashboard-card-content{
+  text-align: center;
+}
+
+.mat-raised-button{
+  float: right;
+  background-color: darkslategray;
+  color: white;
+  font-weight: 900;
+}
+
+.mat-raised-button:hover{
+  background-color: white;
+  color: black;
+}
