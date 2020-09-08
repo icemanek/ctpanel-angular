@@ -2,12 +2,12 @@
   <mat-toolbar-row>
    <h1>Coding Tree Panel</h1>
     <span class="menu-spacer"></span>
-      <a mat-button [routerLink]="'/'"> Strona główna </a>
-      <a mat-button [routerLink]="'/harmonogram'"> Harmonogram </a>
-      <a mat-button [routerLink]="'/meetings'"> Baza tematów </a>
-      <a mat-button [routerLink]="'/create-contact'"> Historia </a>
+      <a mat-button [routerLink]="'/home'" routerLinkActive="active"> Strona główna </a>
+      <a mat-button [routerLink]="'/harmonogram'" routerLinkActive="active"> Harmonogram </a>
+      <a mat-button [routerLink]="'/meetings'" routerLinkActive="active"> Baza tematów </a>
+      <a mat-button [routerLink]="'/create-contact'" routerLinkActive="active"> Historia </a>
       <span class="spacer-two"></span>
-      <a mat-button [routerLink]="'/activities'"> Konto </a>
-      <a mat-button [routerLink]="'/create-activity'"> Wyloguj </a>
+      <a mat-button [routerLink]="'/activities'" routerLinkActive="active"> Konto </a>
+      <a mat-button [routerLink]="'/create-activity'" routerLinkActive="active"> Wyloguj </a>
   </mat-toolbar-row>
 </mat-toolbar>

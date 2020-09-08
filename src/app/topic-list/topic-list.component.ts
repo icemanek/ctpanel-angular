@@ -17,9 +17,9 @@ export class TopicListComponent implements OnInit {
 
   displayedColumns: string[] = [
     "topic",
-    "votes",
-    "addedDate",
     "userAdded",
+    "addedDate",
+    "votes"
   ];
   constructor(private timetableConnectionService: TimetableConnectionService) {}
 

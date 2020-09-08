@@ -40,6 +40,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { TimetableComponent } from './timetable/timetable.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { TopicListComponent } from './topic-list/topic-list.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,12 @@ import { TopicListComponent } from './topic-list/topic-list.component';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    LayoutModule
+    LayoutModule,
+    ToastrModule.forRoot({
+      timeOut: 7000,
+      positionClass: "toast-center-center",
+      preventDuplicates: true,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
