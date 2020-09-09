@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
-import { Meeting } from '../timetable/meeting';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { TimetableConnectionService } from '../connection/timetable-connection.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -21,7 +19,6 @@ export class MainpageComponent implements OnInit{
   }
 
   getFirstMet(){
-    
     this.timetableConnectionService.getIncomingMeeting().subscribe((res) =>
        { 
        this.firstMeet = res

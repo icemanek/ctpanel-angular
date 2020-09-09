@@ -20,7 +20,6 @@ export class TimetableComponent implements OnInit {
     
   getMeetings(){
     this.timetableConnectionService.getAllMeetings().subscribe((res) =>
-    
     this.meetings = res
     )
   }

@@ -1,9 +1,7 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
 import { MatTableDataSource } from "@angular/material/table";
-import { Topic } from './topic';
 import { TimetableConnectionService } from '../connection/timetable-connection.service';
 
 const ELEMENT_DATA: TimetableConnectionService[] = [];
@@ -26,7 +24,6 @@ export class TopicListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   dataSource = new MatTableDataSource(ELEMENT_DATA);
-
 
   ngOnInit() {
     this.timetableConnectionService.getAllTopics().subscribe((res) => {

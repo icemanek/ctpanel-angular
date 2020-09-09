@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
-import { catchError, timeout } from "rxjs/operators";
+import { catchError } from "rxjs/operators";
 import { ToastrService } from "ngx-toastr";
 
 @Injectable({

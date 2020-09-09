@@ -41,6 +41,8 @@ import { TimetableComponent } from './timetable/timetable.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { TopicListComponent } from './topic-list/topic-list.component';
 import { ToastrModule } from 'ngx-toastr';
+import { TreeComponent } from './tree/tree.component';
+import { MatTreeModule } from '@angular/material/tree';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { ToastrModule } from 'ngx-toastr';
     MainpageComponent,
     NavigationBarComponent,
     TimetableComponent,
-    TopicListComponent
+    TopicListComponent,
+    TreeComponent
   ],
   imports: [
     HttpClientModule,
@@ -93,6 +96,7 @@ import { ToastrModule } from 'ngx-toastr';
       positionClass: "toast-center-center",
       preventDuplicates: true,
     }),
+    MatTreeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
