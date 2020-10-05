@@ -123,6 +123,10 @@
               "devServerTarget": "ct-panel:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
