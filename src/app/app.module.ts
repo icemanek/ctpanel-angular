@@ -38,11 +38,11 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { TimetableComponent } from './timetable/timetable.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TopicListComponent } from './topic-list/topic-list.component';
 import { ToastrModule } from 'ngx-toastr';
-import { TreeComponent } from './tree/tree.component';
 import { MatTreeModule } from '@angular/material/tree';
+import { ArchiveMeetingsComponent } from './archive-meetings/archive-meetings.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +51,7 @@ import { MatTreeModule } from '@angular/material/tree';
     NavigationBarComponent,
     TimetableComponent,
     TopicListComponent,
-    TreeComponent
+    ArchiveMeetingsComponent
   ],
   imports: [
     HttpClientModule,

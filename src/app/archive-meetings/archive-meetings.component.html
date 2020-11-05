@@ -8,19 +8,19 @@
 
     <ng-container matColumnDef="description">
       <th mat-header-cell *matHeaderCellDef mat-sort-header class="descriptionColumn">Opis</th>
-      <td mat-cell *matCellDef="let row">{{ row.description | slice:0:40 }}...
+      <td mat-cell *matCellDef="let row">{{ row.description | slice:0:40 }} ...
         <mat-icon class="mat-18">expand_more</mat-icon>
       </td>
     </ng-container>
 
     <ng-container matColumnDef="userAdded">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Autor</th>
-      <td mat-cell *matCellDef="let row">{{ row['userAdded'] }}</td>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Prowadził</th>
+      <td mat-cell *matCellDef="let row">{{ row['leader'] }}</td>
     </ng-container>
 
     <ng-container matColumnDef="addedDate">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Data dodania</th>
-      <td mat-cell *matCellDef="let row">{{ row['addedDate']  | date: 'yyyy-MM-dd' }} </td>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Data</th>
+      <td mat-cell *matCellDef="let row">{{ row['date']  | date: 'yyyy-MM-dd' }} </td>
     </ng-container>
 
     <ng-container matColumnDef="tags">
@@ -28,17 +28,12 @@
       <td mat-cell *matCellDef="let row">{{ row['tags'] }}</td>
     </ng-container>
 
-    <ng-container matColumnDef="votes">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Głosy</th>
-      <td mat-cell *matCellDef="let row"> {{ row['votes'] }} </td>
-    </ng-container>
-
     <ng-container matColumnDef="voting">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Głosuj</th>
       <td mat-cell *matCellDef="let row">
         <button mat-icon-button ><mat-icon class="mat-18">add</mat-icon></button>
         <button mat-icon-button ><mat-icon class="mat-18">remove</mat-icon>
-      </button></td>
+        </button></td>
     </ng-container>
 
     <ng-container matColumnDef="expandedDetail">
@@ -46,7 +41,7 @@
         <div class="example-element-detail"
              [@detailExpand]="row == expandedElement ? 'expanded' : 'collapsed'">
           <div class="example-element-description">
-           Opis tematu: {{ row.description }}</div>
+            Opis tematu: {{ row.description }}</div>
         </div>
       </td>
     </ng-container>
@@ -63,10 +58,11 @@
   </table>
 
   <mat-paginator #paginator
-      [length]="dataSource?.data.length"
-      [pageIndex]="0"
-      [pageSize]="50"
-      [pageSizeOptions]="[25, 50, 100, 250]">
+                 [length]="dataSource?.data.length"
+                 [pageIndex]="0"
+                 [pageSize]="50"
+                 [pageSizeOptions]="[25, 50, 100, 250]">
   </mat-paginator>
 
 </div>
+

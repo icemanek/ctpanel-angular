@@ -22,7 +22,7 @@ export class TimetableConnectionService {
   }
 
   getIncomingMeeting(){
-    return this.http.get('http://localhost:3001/meetings/incoming')
+    return this.http.get('http://localhost:3001/topics/5ed37bd1090c22173fe0c9f1')
     .pipe(
       catchError((err) => {
         this.toasterService.error(err.message);
@@ -32,7 +32,7 @@ export class TimetableConnectionService {
   }
 
   getAllTopics(): Observable<object>{
-    return this.http.get('http://localhost:3001/topics')
+    return this.http.get('http://localhost:3001/topics/')
     .pipe(
       catchError((err) => {
         this.toasterService.error(err.message);

@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { TimetableComponent } from './timetable/timetable.component';
 import { TopicListComponent } from './topic-list/topic-list.component';
-import { TreeComponent } from './tree/tree.component';
+import {ArchiveMeetingsComponent} from './archive-meetings/archive-meetings.component';
 
 const routes: Routes = [
   {
@@ -24,8 +24,8 @@ const routes: Routes = [
     component: TopicListComponent
   },
   {
-    path: 'tree',
-    component: TreeComponent
+    path: 'archive',
+    component: ArchiveMeetingsComponent
   }
 ];
 

@@ -3,6 +3,7 @@
   margin-top: 80px;
   margin-left: 90px;
   margin-right: 90px;
+  font-family: 'Lato', sans-serif;
   }
 
 .header-home{
@@ -12,9 +13,12 @@
   font-weight: 900;
   padding-top: 40px;
   margin-bottom: 40px;
+  font-family: 'Lato', sans-serif;
 }
 
 .dashboard-card {
+  background-color:  lightgray;
+  font-family: 'Lato', sans-serif;
   position: absolute;
   top: 15px;
   left: 15px;
@@ -31,11 +35,24 @@ h1{
   font-weight: 900;
   margin-bottom: 100px;
   margin-left:16px;
+  font-family: 'Lato', sans-serif;
 }
 h2{
   text-align: center;
   font-size: 20px;
   font-weight: 500;
+  font-family: 'Lato', sans-serif;
+}
+
+.title-home{
+  font-size: 40px;
+  color: darkslategrey;
+  font-weight: 900;
+  padding-top: 70px;
+  margin-bottom: 80px;
+  margin-left:16px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .mat-card-actions {
@@ -44,17 +61,20 @@ top: 15px;
 right: 35px;
 bottom: 50px;
 font-size: 30px;
+  font-family: 'Lato', sans-serif;
 }
 
 .mat-card-content{
   margin-left:16px;
   margin-top:20px;
   margin-bottom: 40px;
+  font-family: 'Lato', sans-serif;
 }
 
 .mat-card-title{
   font-size: 30px;
   font-weight: 600;
+  font-family: 'Lato', sans-serif;
 }
 
 .mat-card-footer{
@@ -62,9 +82,11 @@ font-size: 30px;
   margin-left:16px;
   margin-top:20px;
   margin-bottom: 40px;
+  font-family: 'Lato', sans-serif;
 }
 .dashboard-card-content{
   text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .mat-raised-button{
@@ -72,9 +94,11 @@ font-size: 30px;
   background-color: darkslategray;
   color: white;
   font-weight: 900;
+  font-family: 'Lato', sans-serif;
 }
 
 .mat-raised-button:hover{
+  font-family: 'Lato', sans-serif;
   background-color: white;
   color: black;
 }

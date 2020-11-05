@@ -1,24 +1,23 @@
 
 <div class="grid-container">
+  <div class="title-home">Najbliższe spotkanie</div>
   <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let meet of firstMeet | json" [colspan]="2" [rowspan]="2">
+    <mat-grid-tile [colspan]="2" [rowspan]="2">
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title>
-           Prowadzący:  {{ meet.leader }}
+           Prowadzący:  {{ firstMeet['userAdded'] }}
             <mat-card-actions>
-            Data:  {{ meet.date }}
+            Data:  {{ firstMeet['addedDate']  | date: 'yyyy-MM-dd'}}
             </mat-card-actions>
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
-          <h1>{{ meet.topic }}</h1>
-          <h2>{{ meet.description }}</h2>
+          <h1>{{ firstMeet['topic'] }}</h1>
+          <h2>{{ firstMeet['description'] }}</h2>
         </mat-card-content>
-        <h1>Linki</h1>
-        <mat-card-footer>{{ meet.usefulLinks }}</mat-card-footer>
-        <button mat-raised-button
-        matTooltip="Przejdź do spotkania">Do spotkania</button>
+        <h1>Tagi</h1>
+        <mat-card-footer>{{ firstMeet['tags'] }}</mat-card-footer>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>

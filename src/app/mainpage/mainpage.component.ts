@@ -21,7 +21,6 @@ export class MainpageComponent implements OnInit{
     this.timetableConnectionService.getIncomingMeeting().subscribe((res) =>
        {
        this.firstMeet = res;
-       console.log(res);
       });
     }
 }
