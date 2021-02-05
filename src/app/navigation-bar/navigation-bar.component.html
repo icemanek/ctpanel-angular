@@ -1,13 +1,14 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-   <h1>Coding Tree Panel</h1>
-    <span class="menu-spacer"></span>
-      <a mat-button [routerLink]="'/home'" routerLinkActive="active"> Strona główna </a>
-      <a mat-button [routerLink]="'/harmonogram'" routerLinkActive="active"> Harmonogram </a>
-      <a mat-button [routerLink]="'/meetings'" routerLinkActive="active"> Baza tematów </a>
-      <a mat-button [routerLink]="'/archive'" routerLinkActive="active"> Historia </a>
-      <span class="spacer-two"></span>
-      <a mat-button [routerLink]="'/activities'" routerLinkActive="active"> Konto </a>
-      <a mat-button [routerLink]="'/create-activity'" routerLinkActive="active"> Wyloguj </a>
-  </mat-toolbar-row>
-</mat-toolbar>
+<nav>
+  <ul>
+    <li class="logo">Coding Tree Panel</li>
+    <li class="items"><a [routerLink]="'/home'" routerLinkActive="active"><fa-icon [icon]="faHome"></fa-icon> Strona główna </a></li>
+    <li class="items"><a [routerLink]="'/harmonogram'" routerLinkActive="active"><fa-icon [icon]="faCalendarAlt"></fa-icon> Harmonogram </a></li>
+    <li class="items"><a [routerLink]="'/meetings'" routerLinkActive="active"><fa-icon [icon]="faDatabase"></fa-icon> Baza tematów </a></li>
+    <li class="items"><a [routerLink]="'/archive'" routerLinkActive="active"><fa-icon [icon]="faHistory"></fa-icon> Historia </a></li>
+    <li class="items"><a [routerLink]="'/flex'" routerLinkActive="active"> Flex </a></li>
+    <li class="items" *ngIf="auth.isAuthenticated$ | async; else isLoggedOut"><a [routerLink]="'/account'" routerLinkActive="active"><fa-icon [icon]="faUser"></fa-icon> Konto </a></li>
+    <li class="items" *ngIf="auth.isAuthenticated$ | async"><a (click)="auth.logout()">Wyloguj <fa-icon [icon]="faSignOutAlt"></fa-icon> </a></li>
+    <ng-template #isLoggedOut><li class="items"><a (click)="auth.loginWithRedirect()"><fa-icon [icon]="faSignInAlt"></fa-icon> Zaloguj</a></li>
+    </ng-template>
+  </ul>
+</nav>

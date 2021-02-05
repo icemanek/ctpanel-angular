@@ -1,24 +1,8 @@
-
-<div class="grid-container">
-  <div class="title-home">Najbliższe spotkanie</div>
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile [colspan]="2" [rowspan]="2">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-           Prowadzący:  {{ firstMeet['userAdded'] }}
-            <mat-card-actions>
-            Data:  {{ firstMeet['addedDate']  | date: 'yyyy-MM-dd'}}
-            </mat-card-actions>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <h1>{{ firstMeet['topic'] }}</h1>
-          <h2>{{ firstMeet['description'] }}</h2>
-        </mat-card-content>
-        <h1>Tagi</h1>
-        <mat-card-footer>{{ firstMeet['tags'] }}</mat-card-footer>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+<div class="card">
+  <div class="card-header">
+    <div class="card-user">Prowadzący: {{ firstMeet['userAdded'] }}</div>
+    <div class="card-title">{{ firstMeet['topic'] }}</div>
+    <div class="card-date">Data:  {{ firstMeet['addedDate']  | date: 'yyyy-MM-dd'}}</div>
+  </div>
+  <div class="card-description">{{ firstMeet['description'] }}</div>
 </div>

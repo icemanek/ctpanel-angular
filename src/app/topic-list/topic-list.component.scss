@@ -1,31 +1,38 @@
+@import "../../styles";
+
+
 .full-width-table {
   width: 100%;
-  margin-top: 100px;
   margin-bottom: 40px;
   font-family: 'Lato', sans-serif;
   font-weight: 500;
-  background-color:  lightgray;
+  background-color: $background-color;
 }
-.mat-elevation-z8{
+
+.mat-elevation-z8 {
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 40px;
 }
-.mat-header-cell{
-font-weight: 900;
-font-size: 20px;
-color:black;
+
+.mat-header-cell {
+  font-weight: 900;
+  font-size: 20px;
+  background-color: $background-card;
+  color: $button-hover;
 }
 
 th, td {
   width: 400px;
 }
+
 .mat-row:hover {
-  background: #efefef;
+  background: $background-card;
 }
 
-.mat-cell{
+.mat-cell {
   padding-right: 40px;
+  color: $primary-font-color;
 }
 
 tr.example-detail-row {
@@ -33,11 +40,11 @@ tr.example-detail-row {
 }
 
 tr.example-element-row:not(.example-expanded-row):hover {
-  background: whitesmoke;
+  background: $background-card;
 }
 
 tr.example-element-row:not(.example-expanded-row):active {
-  background: #efefef;
+  background: $background-card;
 }
 
 .example-element-row td {
@@ -68,6 +75,11 @@ tr.example-element-row:not(.example-expanded-row):active {
   opacity: 0.5;
 }
 
-.mat-elevation-z12{
+.mat-elevation-z12 {
   padding-top: 200px;
+}
+
+.mat-paginator {
+  background-color: $background-card;
+  color: white;
 }

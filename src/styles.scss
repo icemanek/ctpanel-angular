@@ -1,8 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
-@import "../node_modules/ngx-toastr/toastr.css";
+//@import "node_modules/ngx-toastr/toastr.css";
 
-html, body { height: 100%;background-color:darkgray; }
-body { margin: 0;font-family: 'Lato', sans-serif; }
+$primary-font: "Open Sans",Helvetica Neue,Helvetica,Arial,sans-serif;
+$primary-font-size: 2rem;
+$primary-font-color: #8c989c;
+$primary-font-weight: 700;
+$button-primary: #70c989;
+$button-hover: #95d7a8;
+$background-color: #171717;
+$background-card: #2A3840;
+$background-menu: #20272d;
+
+*, *::after, *::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+body{
+  font-family: $primary-font;
+  box-sizing: border-box;
+  background-color: $background-color;
+}
+html{
+  font-size: 62.5%;
+}
+.container{
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 2%;
+  width: 100%;
+}
+
 
 /* position */
 .toast-center-center {

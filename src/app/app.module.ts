@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
@@ -38,11 +38,19 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { TimetableComponent } from './timetable/timetable.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { TopicListComponent } from './topic-list/topic-list.component';
 import { ToastrModule } from 'ngx-toastr';
 import { MatTreeModule } from '@angular/material/tree';
 import { ArchiveMeetingsComponent } from './archive-meetings/archive-meetings.component';
+import { AuthModule } from '@auth0/auth0-angular';
+import { AuthButtonComponentComponent } from './auth-button-component/auth-button-component.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {ExtendedModule, FlexLayoutModule} from '@angular/flex-layout';
+import { FlexTestComponent } from './flex-test/flex-test.component';
+import { MojeComponent } from './moje/moje.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -51,7 +59,12 @@ import { ArchiveMeetingsComponent } from './archive-meetings/archive-meetings.co
     NavigationBarComponent,
     TimetableComponent,
     TopicListComponent,
-    ArchiveMeetingsComponent
+    ArchiveMeetingsComponent,
+    AuthButtonComponentComponent,
+    AccountDetailsComponent,
+    PageNotFoundComponent,
+    FlexTestComponent,
+    MojeComponent
   ],
   imports: [
     HttpClientModule,
@@ -93,10 +106,17 @@ import { ArchiveMeetingsComponent } from './archive-meetings/archive-meetings.co
     LayoutModule,
     ToastrModule.forRoot({
       timeOut: 7000,
-      positionClass: "toast-center-center",
+      positionClass: 'toast-center-center',
       preventDuplicates: true,
     }),
     MatTreeModule,
+    AuthModule.forRoot({
+      domain: 'meet-up.eu.auth0.com',
+      clientId: 'tym08cl1aS817s4gowKeKvbSWmEyzUbO',
+    }),
+    ExtendedModule,
+    FlexLayoutModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
