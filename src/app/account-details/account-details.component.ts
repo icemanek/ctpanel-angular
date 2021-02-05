@@ -11,7 +11,7 @@ export class AccountDetailsComponent{
 
   discordMessage() {
     const request = new XMLHttpRequest();
-    request.open('POST', 'https://discord.com/api/webhooks/775461982832164925/oSUgvfrbiDMp1S5n4bLzaMaUxOEPbD_24CPY_Dwc_J-oMkAKlDEIlqXwmnNnmytGhqNv');
+    request.open('POST', '???');
 
     request.setRequestHeader('Content-type', 'application/json');
     const myEmbed = {
@@ -34,11 +34,11 @@ export class AccountDetailsComponent{
 
 //
 //   var axios = require('axios@0.19.2');
-//   const botToken = 'Njk5NTMxMTY3NDU1NjQxNjkx.XqXRjQ.SjD2ePsT_cghTKks5Lqiq6FLbTQ';
-//   const codingTreeGuildId = '627055978067525632';
+//   const botToken = 'xxxx';
+//   const codingTreeGuildId = 'xxxx';
 //
 //   axios
-// .get('https://discordapp.com/api/users/@me', {
+// .get('xxx', {
 //   headers: {
 //     Authorization: 'Bearer ' + access_token,
 //   },
